@@ -21,3 +21,6 @@ bin/magento cache:clean
 
 ## Check magento version
 php -r "require 'app/Mage.php'; echo Mage::getVersion(); "
+
+## Fix issue cron.sh: line 54: syntax error: unexpected end of file
+sed -i 's/\r$//' cron.sh
