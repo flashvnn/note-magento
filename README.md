@@ -35,3 +35,10 @@ DELETE
     FROM `core_email_queue`
   )
 ```
+## Translate
+
+Magento prioritizes translations sources (from highest to lowest):
+
+DB (the core_translate table)
+The theme translate.csv file
+The app/locale/*/*.csv files
