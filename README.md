@@ -51,3 +51,6 @@ Go to the table named ‘core_url_rewrite’
 Empty this table
 
 Log back in to the Magento backend and reindex all
+
+## Reindex 
+php shell/indexer.php reindex all
