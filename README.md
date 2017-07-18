@@ -40,5 +40,5 @@ DELETE
 Magento prioritizes translations sources (from highest to lowest):
 
 DB (the core_translate table)
-The theme translate.csv file
+The theme translate.csv file: app/design/frontend/{interface}/{theme}/locale/{lang_ISO}/translate.csv
 The app/locale/*/*.csv files
