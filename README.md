@@ -24,3 +24,14 @@ php -r "require 'app/Mage.php'; echo Mage::getVersion(); "
 
 ## Fix issue cron.sh: line 54: syntax error: unexpected end of file
 sed -i 's/\r$//' cron.sh
+
+## Magento flush email queue recipients
+```sql
+DELETE 
+  FROM `core_email_queue_recipients` 
+  WHERE `core_email_queue_recipients`.`message_id` NOT IN 
+  (
+    SELECT `core_email_queue`.`message_id` 
+    FROM `core_email_queue`
+  )
+```
