@@ -42,3 +42,9 @@ Magento prioritizes translations sources (from highest to lowest):
 DB (the core_translate table)
 The theme translate.csv file: app/design/frontend/{interface}/{theme}/locale/{lang_ISO}/translate.csv
 The app/locale/*/*.csv files
+
+## Remove all url rewrite
+Using your favourite database browser, connect to your Magento database
+Go to the table named ‘core_url_rewrite’
+Empty this table
+Log back in to the Magento backend and reindex all
