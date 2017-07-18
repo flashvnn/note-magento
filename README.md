@@ -45,6 +45,9 @@ The app/locale/*/*.csv files
 
 ## Remove all url rewrite
 Using your favourite database browser, connect to your Magento database
+
 Go to the table named ‘core_url_rewrite’
+
 Empty this table
+
 Log back in to the Magento backend and reindex all
