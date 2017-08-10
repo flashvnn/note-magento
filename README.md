@@ -54,3 +54,21 @@ Log back in to the Magento backend and reindex all
 
 ## Reindex 
 php shell/indexer.php reindex all
+
+## Run script external
+
+```php
+<?php
+
+require_once('app/Mage.php'); //Path to Magento
+umask(0);
+Mage::app();
+
+// Now you can run ANY Magento code you want
+
+// Change 12 to the ID of the product you want to load
+$_product = Mage::getModel('catalog/product')->load(12);
+
+echo $_product->getName();
+```
+
